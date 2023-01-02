@@ -10,7 +10,7 @@ export default class Footer extends Component {
         </span>{" "}
         by Hugh Bromund
         <br />
-        <a href="https://github.com/hughbromund/hughbromund.github.io">Open Source Website Source Code</a> -
+        <a href="https://github.com/hughbromund/hughbromund.com">Open Source Website Source Code</a> -
         Hosted by <a href="https://railway.app/">Railway.app</a>
       </div>
     );

@@ -104,7 +104,6 @@ export default class Projects extends Component {
                 awardsNames={["2nd Place Overall - BoilerMake VIII"]}
                 awardsLinks={["https://devpost.com/software/justifi"]}
                 repo="https://github.com/hughbromund/Justifi"
-                demo="https://justifiapp.com/"
               />
             </Col>
             <Col>
@@ -173,7 +172,7 @@ export default class Projects extends Component {
                   "css3-alt",
                   "npm",
                 ]}
-                repo="https://github.com/hughbromund/hughbromund.github.io"
+                repo="https://github.com/hughbromund/hughbromund.com"
                 demo="https://hughbromund.com"
               />
             </Col>
