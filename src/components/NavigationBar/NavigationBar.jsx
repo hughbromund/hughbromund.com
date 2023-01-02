@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import classes from "./NavigationBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Container from 'react-bootstrap/Container';
 // import NavDropdown from "react-bootstrap/NavDropdown";
 // import Form from "react-bootstrap/Form";
 // import Container from "react-bootstrap/Container";
@@ -27,15 +28,14 @@ export default class NavigationBar extends Component {
           <Navbar.Brand onClick={this.scrollToTop}>
             <strong>Hugh Bromund</strong>
           </Navbar.Brand>
-
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="me-auto">
               <Nav.Link>
                 <Link
                   activeClass="active"
                   to="projects"
-                  spy={true}
+                  spy={false}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -47,7 +47,7 @@ export default class NavigationBar extends Component {
                 <Link
                   activeClass="active"
                   to="about"
-                  spy={true}
+                  spy={false}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -59,7 +59,7 @@ export default class NavigationBar extends Component {
                 <Link
                   activeClass="active"
                   to="experience"
-                  spy={true}
+                  spy={false}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -72,7 +72,7 @@ export default class NavigationBar extends Component {
                 <Link
                   activeClass="active"
                   to="contact"
-                  spy={true}
+                  spy={false}
                   smooth={true}
                   offset={-70}
                   duration={500}
@@ -81,31 +81,32 @@ export default class NavigationBar extends Component {
                 </Link>
               </Nav.Link>
             </Nav>
-
-            <Nav.Link target="_blank" href="https://github.com/hughbromund">
-              <FontAwesomeIcon
-                icon={["fab", "github"]}
-                color="white"
-                size="2x"
-              />
-            </Nav.Link>
-            <Nav.Link
-              target="_blank"
-              href="https://www.linkedin.com/in/hughbromund/"
-            >
-              <FontAwesomeIcon
-                icon={["fab", "linkedin"]}
-                color="white"
-                size="2x"
-              />
-            </Nav.Link>
-            <Nav.Link target="_blank" href="mailto:hughbromund44@gmail.com">
-              <FontAwesomeIcon
-                icon={["fas", "envelope"]}
-                color="white"
-                size="2x"
-              />
-            </Nav.Link>
+            <Nav>
+              <Nav.Link target="_blank" href="https://github.com/hughbromund">
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                  color="white"
+                  size="2x"
+                />
+              </Nav.Link>
+              <Nav.Link
+                target="_blank"
+                href="https://www.linkedin.com/in/hughbromund/"
+              >
+                <FontAwesomeIcon
+                  icon={["fab", "linkedin"]}
+                  color="white"
+                  size="2x"
+                />
+              </Nav.Link>
+              <Nav.Link target="_blank" href="mailto:hugh@bromund.net">
+                <FontAwesomeIcon
+                  icon={["fas", "envelope"]}
+                  color="white"
+                  size="2x"
+                />
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>

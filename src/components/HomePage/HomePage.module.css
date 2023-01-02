@@ -13,8 +13,7 @@
   margin: 0 auto;
 }
 .picture {
-  max-width: 20rem;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  max-width: 30rem;
   transition: 0.5s;
 }
 .picture:hover {

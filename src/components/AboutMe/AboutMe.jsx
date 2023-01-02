@@ -171,10 +171,26 @@ export default class AboutMe extends Component {
               xs={1}
               sm={1}
               md={2}
-              lg={3}
-              xl={3}
+              lg={2}
+              xl={2}
               className={classes.experienceRow}
             >
+              <Col>
+                <ExperienceCard
+                company="Dropbox"
+                position="Software Engineer"
+                location="Seattle, WA"
+                about="Working on the Product Growth Team at Dropbox. Creating new experiences for Dropbox users."
+                dates="March 2022 - Present"
+                responsibilities={[
+                  "Design, build, and launch experimental features and designs",
+                  "Monitor rollout of new experiences and ensure a good customer experience",
+                  "Run on-call and ensure reliability of my teams surfaces",
+                  "Take learnings from experiments into future work"
+                ]}
+                responsibilitiesTitle="Responsibilities"
+                />
+              </Col>
               <Col>
                 <ExperienceCard
                 company="Dropbox"

@@ -84,12 +84,7 @@ export default class ProjectCard extends Component {
           >
             <Card className={classes.accordionCard}>
               <Accordion.Item eventKey="role">
-                <Accordion.Header 
-                  className={
-                  this.state.activeSection === "role"
-                    ? classes.accordionToggleActive
-                    : classes.accordionToggle
-                }>
+                <Accordion.Header>
                   <b>My Role</b>
                 </Accordion.Header>
                 <Accordion.Body>
@@ -98,40 +93,24 @@ export default class ProjectCard extends Component {
               </Accordion.Item>
             </Card>
             <Card className={classes.accordionCard}>
-              <Accordion.Button
-                as={Card.Header}
-                eventKey="tech"
-                className={
-                  this.state.activeSection === "tech"
-                    ? classes.accordionToggleActive
-                    : classes.accordionToggle
-                }
-              >
-                <b>Technologies</b>
-              </Accordion.Button>
-              <Accordion.Collapse eventKey="tech">
-                <Card.Body>
+              <Accordion.Item eventKey="tech">
+                <Accordion.Header>
+                  <b>Technologies</b>
+                </Accordion.Header>
+                <Accordion.Body>
                   <Row>{techList}</Row>
-                </Card.Body>
-              </Accordion.Collapse>
+                </Accordion.Body>
+              </Accordion.Item>
             </Card>
             <Card className={classes.accordionCard}>
-              <Accordion.Button
-                as={Card.Header}
-                eventKey="awards"
-                className={
-                  this.state.activeSection === "awards"
-                    ? classes.accordionToggleActive
-                    : classes.accordionToggle
-                }
-              >
-                <b>Awards</b>
-              </Accordion.Button>
-              <Accordion.Collapse eventKey="awards">
-                <Card.Body>
-                  <Col>{awardsList}</Col>
-                </Card.Body>
-              </Accordion.Collapse>
+              <Accordion.Item eventKey="awards">
+                <Accordion.Header>
+                  <b>Awards</b>
+                </Accordion.Header>
+                <Accordion.Body>
+                <Col>{awardsList}</Col>
+              </Accordion.Body>
+              </Accordion.Item>
             </Card>
           </Accordion>
         </Card>

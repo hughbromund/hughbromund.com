@@ -29,7 +29,7 @@ export default class ExperienceCard extends Component {
           <Card.Body>
             <Card.Title>
               <strong>{this.props.company}</strong> |{" "}
-              <i>{this.props.position}</i>
+              <span className={classes.jobTitle}>{this.props.position}</span>
             </Card.Title>
             <Card.Subtitle>
               <Row xs={1} sm={2}>

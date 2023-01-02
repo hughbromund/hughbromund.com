@@ -10,6 +10,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transform: translate(0px, -7px);
 }
+.jobTitle {
+  color: #257af9;
+}
 
 @media (prefers-color-scheme: dark) {
   .ExperienceCard {

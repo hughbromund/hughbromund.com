@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-scroll";
 import hugh from "../../assets/hugh_new.png";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import classes from "./HomePage.module.css";
 
@@ -17,7 +16,7 @@ export default class HomePage extends Component {
           <Col sm>
             <span style={{ float: "right" }}>
               <div className={classes.picture}>
-                <Image fluid rounded src={hugh}></Image>
+                <Image fluid src={hugh}></Image>
               </div>
             </span>
           </Col>
@@ -34,8 +33,7 @@ export default class HomePage extends Component {
             </h1>
 
             <p style={{ maxWidth: "30rem" }}>
-              I'm a full-time Software Engineer at <i>Dropbox</i>. I have a
-              passion for all things Computer Science.
+              I'm a Software Engineer at <i>Dropbox</i> working in Seattle, WA. 
             </p>
             <Button variant="primary">
               <Link

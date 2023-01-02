@@ -11,7 +11,7 @@ export default class Footer extends Component {
         by Hugh Bromund
         <br />
         <a href="https://github.com/hughbromund/hughbromund.github.io">Open Source Website Source Code</a> -
-        Hosted by GitHub Pages
+        Hosted by <a href="https://railway.app/">Railway.app</a>
       </div>
     );
   }

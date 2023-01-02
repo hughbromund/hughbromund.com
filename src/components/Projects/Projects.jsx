@@ -43,7 +43,7 @@ export default class Projects extends Component {
                   "npm",
                 ]}
                 repo="https://github.com/hughbromund/DubbClub"
-                demo="https://dubb.club"
+                demo="http://dubbclub.shmem.io/"
               />
             </Col>
             <Col>
@@ -75,7 +75,7 @@ export default class Projects extends Component {
                   "npm",
                 ]}
                 repo="https://github.com/hughbromund/FINEX"
-                demo="https://finex.money"
+                demo="https://finex.shmem.io"
               />
             </Col>
             <Col>
@@ -145,7 +145,7 @@ export default class Projects extends Component {
                   "google",
                 ]}
                 repo="https://github.com/hughbromund/MarketGoBrr"
-                demo="https://marketgobrr.com/"
+                demo="https://marketgobrr.shmem.io/"
                 awardsNames={["Finalist (Top 4) - VandyHacks VII"]}
                 awardsLinks={["https://devpost.com/software/marketgobrr"]}
               />

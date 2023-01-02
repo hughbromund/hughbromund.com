@@ -12,7 +12,7 @@ export default class ContactMe extends Component {
         </h1>
         <div className={classes.inner}>
           <h3>Interested in Talking?</h3>
-          <Button href="mailto:hughbromund44@gmail.com">
+          <Button href="mailto:hugh@bromund.net">
             Email{" "}
             <span role="img" aria-label="e-mail">
               ✉️
