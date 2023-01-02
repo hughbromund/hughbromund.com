@@ -1,7 +1,7 @@
 {
-  "name": "vite---react",
+  "name": "hughbromund.com",
   "private": true,
-  "version": "0.0.0",
+  "version": "3.0.0",
   "scripts": {
     "start": "npx http-server ./dist",
     "dev": "vite",
