@@ -1,0 +1,35 @@
+.wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 75vh;
+}
+.container {
+  background-image: url("../../assets/background.jpg");
+  background-blend-mode: saturation;
+  background-size: cover;
+}
+.title {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.picture {
+  max-width: 20rem;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  transition: 0.5s;
+}
+.picture:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transform: translate(0px, -7px);
+}
+@media only screen and (max-width: 575px) {
+  .picture {
+    max-width: 70%;
+    max-height: 30%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    display: none;
+  }
+  .wrapper {
+    min-height: 50vh;
+  }
+}

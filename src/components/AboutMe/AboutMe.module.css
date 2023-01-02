@@ -1,0 +1,46 @@
+.wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 100vh;
+  padding-bottom: 5%;
+}
+.title {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.inner {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.carousel {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+.experienceRow {
+  justify-content: center;
+}
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  margin-bottom: 5%;
+  transition: 0.5s;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transform: translate(0px, -7px);
+}
+.techCol {
+  justify-content: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #202020;
+  }
+  .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    transform: translate(0px, -7px);
+  }
+}

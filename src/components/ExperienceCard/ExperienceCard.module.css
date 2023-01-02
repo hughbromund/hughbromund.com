@@ -1,0 +1,30 @@
+.ExperienceCard {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+.dateCol {
+  text-align: right;
+}
+.ExperienceCard:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transform: translate(0px, -7px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ExperienceCard {
+    background-color: #202020;
+  }
+  .ExperienceCard:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    transform: translate(0px, -7px);
+  }
+  .ListGroupItem {
+    background-color: #202020;
+  }
+  .ListGroupItemHeader {
+    background-color: #257af9;
+    background-image: linear-gradient(15deg, #257af9 0%, #2426ca 100%);
+    color: white;
+  }
+}

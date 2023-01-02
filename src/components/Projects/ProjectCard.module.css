@@ -1,0 +1,42 @@
+.accordionCard {
+  border: none;
+  border-radius: 0px;
+}
+.accordionToggle {
+  transition: 0.5s;
+}
+.accordionToggleActive {
+  background-color: #257af9;
+  background-image: linear-gradient(15deg, #257af9 0%, #2426ca 100%);
+  color: white;
+  /* transition: 0.3s; */
+}
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  transition: 0.5s;
+  margin-bottom: 5%;
+  outline: none;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transform: translate(0px, -7px);
+}
+.techCol {
+  justify-content: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #202020;
+  }
+  .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    transform: translate(0px, -7px);
+  }
+  .accordionCard {
+    background-color: #202020;
+    outline: none;
+  }
+}

@@ -1,0 +1,35 @@
+.all {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 100pt;
+}
+.bodyDiv {
+  padding-top: 75px;
+  /*padding-right: 10px;
+  padding-left: 10px;
+  */
+}
+.navContainer {
+  /* margin-bottom: 100px; */
+}
+.container {
+  background-color: #ffffff;
+  color: #000000;
+  overflow: auto;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #181818;
+    color: #ffffff;
+    overflow: auto;
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
