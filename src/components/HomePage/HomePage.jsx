@@ -35,17 +35,8 @@ export default class HomePage extends Component {
             <p style={{ maxWidth: "30rem" }}>
               I'm a Software Engineer at <i>Dropbox</i> working in Seattle, WA. 
             </p>
-            <Button variant="primary">
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                About Me
-              </Link>
+            <Button variant="primary" as={Link} to="about" offset={-70}>
+              About Me
             </Button>
           </Col>
         </Row>
