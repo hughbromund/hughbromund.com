@@ -43,7 +43,7 @@ export default class Projects extends Component {
                   "npm",
                 ]}
                 repo="https://github.com/hughbromund/DubbClub"
-                demo="http://dubbclub.shmem.io/"
+                demo="https://dubbclub.shmem.io/"
               />
             </Col>
             <Col>
