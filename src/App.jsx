@@ -29,7 +29,9 @@ class App extends Component {
           <NavigationBar />
         </div>
         <div className={classes.bodyDiv}>
-          <HomePage id="home" />
+          <div id="home">
+            <HomePage />
+          </div>
           <div id="projects">
             <Projects />
           </div>

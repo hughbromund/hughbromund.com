@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import classes from "./ContactMe.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 export default class ContactMe extends Component {
   render() {
@@ -13,10 +15,7 @@ export default class ContactMe extends Component {
         <div className={classes.inner}>
           <h3>Interested in Talking?</h3>
           <Button href="mailto:hugh@bromund.net">
-            Email{" "}
-            <span role="img" aria-label="e-mail">
-              ✉️
-            </span>
+            Email <FontAwesomeIcon icon="fa-solid fa-envelope" />
           </Button>
         </div>
       </div>

@@ -25,60 +25,23 @@ export default class NavigationBar extends Component {
           variant="dark"
           className={classes.navbar}
         >
-          <Navbar.Brand onClick={this.scrollToTop}>
+          <Navbar.Brand as={Link} to="home" offset={-70} style={{cursor: "pointer"}}>
             <strong>Hugh Bromund</strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>
-                <Link
-                  activeClass="active"
-                  to="projects"
-                  spy={false}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Projects
-                </Link>
+              <Nav.Link as={Link} to="projects" offset={-70} style={{cursor: "pointer"}}>
+                Projects
               </Nav.Link>
-              <Nav.Link>
-                <Link
-                  activeClass="active"
-                  to="about"
-                  spy={false}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  About Me
-                </Link>
+              <Nav.Link as={Link} to="about" offset={-70} style={{cursor: "pointer"}}>
+                About Me
               </Nav.Link>
-              <Nav.Link>
-                <Link
-                  activeClass="active"
-                  to="experience"
-                  spy={false}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Experience
-                </Link>
+              <Nav.Link as={Link} to="experience" offset={-70} style={{cursor: "pointer"}}>
+                Experience
               </Nav.Link>
-
-              <Nav.Link>
-                <Link
-                  activeClass="active"
-                  to="contact"
-                  spy={false}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  Contact Me
-                </Link>
+              <Nav.Link as={Link} to="contact" offset={-70} style={{cursor: "pointer"}}>
+                Contact Me
               </Nav.Link>
             </Nav>
             <Nav>

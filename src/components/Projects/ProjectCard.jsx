@@ -62,8 +62,9 @@ export default class ProjectCard extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={this.props.demo}
+                style={{textDecoration: "None"}}
               >
-                Demo
+                Demo <FontAwesomeIcon size="xs" icon="fa-solid fa-arrow-up-right-from-square" />
               </a>
               <span style={{ float: "right" }}>
                 <a
@@ -84,30 +85,30 @@ export default class ProjectCard extends Component {
           >
             <Card className={classes.accordionCard}>
               <Accordion.Item eventKey="role">
-                <Accordion.Header>
+                <Accordion.Header className={classes.accordionHeader}>
                   <b>My Role</b>
                 </Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className={classes.accordionBody}>
                   {this.props.role}
                 </Accordion.Body>
               </Accordion.Item>
             </Card>
             <Card className={classes.accordionCard}>
               <Accordion.Item eventKey="tech">
-                <Accordion.Header>
+                <Accordion.Header className={classes.accordionHeader}>
                   <b>Technologies</b>
                 </Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className={classes.accordionBody}>
                   <Row>{techList}</Row>
                 </Accordion.Body>
               </Accordion.Item>
             </Card>
             <Card className={classes.accordionCard}>
               <Accordion.Item eventKey="awards">
-                <Accordion.Header>
+                <Accordion.Header className={classes.accordionHeader}>
                   <b>Awards</b>
                 </Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className={classes.accordionBody}>
                 <Col>{awardsList}</Col>
               </Accordion.Body>
               </Accordion.Item>
