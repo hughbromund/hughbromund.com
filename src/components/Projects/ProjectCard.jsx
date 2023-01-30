@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -14,6 +15,18 @@ export default class ProjectCard extends Component {
   constructor(props) {
     super(props);
     this.state = { activeSection: DEFAULT_ACTIVE_KEY };
+  }
+
+   CustomAccordionHeader({ children, eventKey }) {
+   const decoratedOnClick = useAccordionButton(eventKey);
+  
+    return (
+      <Card.Body className={classes.accordionHeader} onClick={decoratedOnClick}>
+        <Card.Subtitle>
+          {children}
+        </Card.Subtitle>
+      </Card.Body>
+    );
   }
 
   render() {
@@ -80,14 +93,13 @@ export default class ProjectCard extends Component {
             <Card.Subtitle>{this.props.description}</Card.Subtitle>
           </Card.Body>
           <Accordion
-            defaultActiveKey={DEFAULT_ACTIVE_KEY}
-            flush
+            defaultActiveKey={DEFAULT_ACTIVE_KEY} flush
           >
             <Card className={classes.accordionCard}>
               <Accordion.Item eventKey="role">
-                <Accordion.Header className={classes.accordionHeader}>
+                <this.CustomAccordionHeader eventKey="role">
                   <b>My Role</b>
-                </Accordion.Header>
+                </this.CustomAccordionHeader>
                 <Accordion.Body className={classes.accordionBody}>
                   {this.props.role}
                 </Accordion.Body>
@@ -95,19 +107,19 @@ export default class ProjectCard extends Component {
             </Card>
             <Card className={classes.accordionCard}>
               <Accordion.Item eventKey="tech">
-                <Accordion.Header className={classes.accordionHeader}>
+                <this.CustomAccordionHeader eventKey="tech">
                   <b>Technologies</b>
-                </Accordion.Header>
+                </this.CustomAccordionHeader>
                 <Accordion.Body className={classes.accordionBody}>
                   <Row>{techList}</Row>
                 </Accordion.Body>
               </Accordion.Item>
             </Card>
             <Card className={classes.accordionCard}>
-              <Accordion.Item eventKey="awards">
-                <Accordion.Header className={classes.accordionHeader}>
+              <Accordion.Item eventKey="awards" className={classes.accordionItem}>
+              <this.CustomAccordionHeader eventKey="awards">
                   <b>Awards</b>
-                </Accordion.Header>
+                </this.CustomAccordionHeader>
                 <Accordion.Body className={classes.accordionBody}>
                 <Col>{awardsList}</Col>
               </Accordion.Body>
