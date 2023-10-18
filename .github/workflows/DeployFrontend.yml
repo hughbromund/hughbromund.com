@@ -12,6 +12,10 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: "read"
+      id-token: "write"
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,17 +27,17 @@ jobs:
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
-      - name: Build Fronted
-        run: |
-          export REACT_APP_VERSION=frontend-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
-          yarn install
-          yarn build
-
       - id: "auth"
         uses: "google-github-actions/auth@v1"
         with:
           workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
           service_account: ${{ secrets.SA_EMAIL }}
+
+      - name: Build Fronted
+        run: |
+          export REACT_APP_VERSION=frontend-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
+          yarn install
+          yarn build
 
       - id: "deploy"
         uses: google-github-actions/deploy-appengine@v1
