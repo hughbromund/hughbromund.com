@@ -32,6 +32,7 @@ jobs:
         with:
           workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
           service_account: ${{ secrets.SA_EMAIL }}
+          project_id: ${{ secrets.PROJECT_ID }}
 
       - name: Build Fronted
         run: |
