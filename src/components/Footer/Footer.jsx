@@ -13,10 +13,7 @@ export default class Footer extends Component {
         <a href="https://github.com/hughbromund/hughbromund.com">
           Open Source Website Source Code
         </a>{" "}
-        | Hosted by <a href="https://cloud.google.com/">Google Cloud</a> | Version:{" "}
-        {import.meta.env.VITE_APP_VERSION
-          ? process.env.VITE_APP_VERSION
-          : "Local"}
+        | Hosted by <a href="https://cloud.google.com/">Google Cloud</a>
       </div>
     );
   }
