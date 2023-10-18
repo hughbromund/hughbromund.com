@@ -1,0 +1,43 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**"
+
+jobs:
+  setup-build-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Declare GitHub Hash and Branch
+        id: vars
+        shell: bash
+        run: |
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - name: Build Fronted
+        run: |
+          export REACT_APP_VERSION=frontend-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
+          yarn install
+          yarn build
+
+      - id: "auth"
+        uses: "google-github-actions/auth@v1"
+        with:
+          workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
+          service_account: ${{ secrets.SA_EMAIL }}
+
+      - id: "deploy"
+        uses: google-github-actions/deploy-appengine@v1
+        with:
+          deliverables: app.yaml
+          project_id: ${{ secrets.project_id }}
+          version: "frontend-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}"
