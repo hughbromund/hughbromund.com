@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Declare GitHub Hash and Branch
         id: vars
@@ -39,5 +39,5 @@ jobs:
         uses: google-github-actions/deploy-appengine@v1
         with:
           deliverables: app.yaml
-          project_id: ${{ secrets.project_id }}
+          project_id: ${{ secrets.PROJECT_ID }}
           version: "frontend-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}"
