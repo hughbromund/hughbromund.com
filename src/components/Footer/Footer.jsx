@@ -14,8 +14,8 @@ export default class Footer extends Component {
           Open Source Website Source Code
         </a>{" "}
         | Hosted by <a href="https://cloud.google.com/">Google Cloud</a> | Version:{" "}
-        {import.meta.env.REACT_APP_VERSION
-          ? process.env.REACT_APP_VERSION
+        {import.meta.env.VITE_APP_VERSION
+          ? process.env.VITE_APP_VERSION
           : "Local"}
       </div>
     );

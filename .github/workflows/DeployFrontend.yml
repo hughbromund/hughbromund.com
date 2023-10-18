@@ -36,7 +36,7 @@ jobs:
 
       - name: Build Fronted
         run: |
-          export REACT_APP_VERSION=prod-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
+          export VITE_APP_VERSION=prod-${{ steps.vars.outputs.branch }}-${{ steps.vars.outputs.sha_short }}
           yarn install
           yarn build
 
