@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import classes from "./ContactMe.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// small change to kickoff github actions
 
 export default class ContactMe extends Component {
   render() {
