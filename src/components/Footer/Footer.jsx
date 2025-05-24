@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router";
 
 export default class Footer extends Component {
   render() {
@@ -13,7 +14,7 @@ export default class Footer extends Component {
         <a href="https://github.com/hughbromund/hughbromund.com">
           Open Source Website Source Code
         </a>{" "}
-        | Hosted by <a href="https://cloud.google.com/">Google Cloud</a>
+        | Hosted by <a href="https://cloud.google.com/">Google Cloud</a> | <NavLink to="/privacy-policy">Privacy Policy</NavLink>
       </div>
     );
   }
