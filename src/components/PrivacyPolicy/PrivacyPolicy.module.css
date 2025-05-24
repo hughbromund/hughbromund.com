@@ -1,0 +1,15 @@
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 25vh;
+  }
+  .title {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+  .inner {
+    max-width: 100rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  

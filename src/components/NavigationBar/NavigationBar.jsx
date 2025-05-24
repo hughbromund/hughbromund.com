@@ -4,13 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import classes from "./NavigationBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, animateScroll as scroll } from "react-scroll";
-import Container from 'react-bootstrap/Container';
-// import NavDropdown from "react-bootstrap/NavDropdown";
-// import Form from "react-bootstrap/Form";
-// import Container from "react-bootstrap/Container";
-
-// import history from "../../routing/History";
-// import { ABOUT_ME, HOME_PATH, PROJECTS } from "../../constants/Constants";
+import { NavLink } from "react-router";
 
 export default class NavigationBar extends Component {
   scrollToTop = () => {
@@ -25,7 +19,7 @@ export default class NavigationBar extends Component {
           variant="dark"
           className={classes.navbar}
         >
-          <Navbar.Brand as={Link} to="home" offset={-70} style={{cursor: "pointer"}}>
+          <Navbar.Brand as={NavLink} to="/" offset={-70} style={{cursor: "pointer"}}>
             <strong>Hugh Bromund</strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
