@@ -10,6 +10,7 @@ import Projects from "./components/Projects/Projects";
 import AboutMe from "./components/AboutMe/AboutMe";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Footer from "./components/Footer/Footer";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 // import { render } from "@testing-library/react";
 
 // Initialization of Fontawesome Icons
@@ -42,6 +43,7 @@ class App extends Component {
             <ContactMe />
           </div>
           <Footer />
+          <PrivacyPolicy />
         </div>
       </div>
     );
